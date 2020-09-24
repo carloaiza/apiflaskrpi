@@ -1,10 +1,12 @@
-from flask import Flask
+from flask_api import FlaskAPI
+#from flask import Flask
 from jwtprueba.database import init_db, shutdown_db_session
 
-app = Flask(__name__)
+app = FlaskAPI(__name__)
 
 import jwtprueba.jwt
 import jwtprueba.views
+#import jwtprueba.EmulatorGUI
 
 
 init_db()
